@@ -1,40 +1,38 @@
+```mermaid
 classDiagram
-direction BT
-class AparelhoTelefonico {
-<<Interface>>
-  + desligar() void
-  + ligar(String) void
-  + atender() void
-  + iniciarCorreioVoz() void
-  + encerrarChamada() void
-}
 class Iphone {
   + Iphone() 
-  + desligar() void
-  + ligar(String) void
-  + atender() void
-  + tocar() void
-  + iniciarCorreioVoz() void
-  + adicionarNovaAba() void
-  + selecionarMusica(String) void
-  + encerrarChamada() void
-  + pausar() void
-  + atualizarPagina() void
-  + exibirPagina(String) void
+  +void desligar() 
+  +void ligar(String) 
+  +void atender() 
+  +void tocar() 
+  +void iniciarCorreioVoz() 
+  +void adicionarNovaAba() 
+  +void selecionarMusica(String) 
+  +void encerrarChamada() 
+  +void pausar() 
+  +void atualizarPagina() 
+  +void exibirPagina(String)
+}
+class AparelhoTelefonico {
+  +void desligar() 
+  +void ligar(String) 
+  +void atender() 
+  +void iniciarCorreioVoz() 
+  +void encerrarChamada() 
 }
 class NavegadorInternet {
-<<Interface>>
-  + exibirPagina(String) void
-  + adicionarNovaAba() void
-  + atualizarPagina() void
+  +void exibirPagina(String) 
+  +void adicionarNovaAba() 
+  +void atualizarPagina() 
 }
 class ReprodutorMusical {
-<<Interface>>
-  + tocar() void
-  + pausar() void
-  + selecionarMusica(String) void
+  +void tocar() 
+  +void pausar() 
+  +void selecionarMusica(String) 
 }
 
-Iphone  ..>  AparelhoTelefonico 
-Iphone  ..>  NavegadorInternet 
-Iphone  ..>  ReprodutorMusical 
+Iphone  -->  AparelhoTelefonico 
+Iphone  -->  NavegadorInternet 
+Iphone  -->  ReprodutorMusical 
+```
